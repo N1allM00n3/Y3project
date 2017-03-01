@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class StudentDetailsComponent implements OnInit {
 
+  public imageUrl = "./Y3project/src/app/student-details/images/nmpic.jpg";
+
   constructor(private router: Router) { }
 
   navigateH() {
