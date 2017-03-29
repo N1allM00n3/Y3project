@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(["student-details"])
   }
 
+  navigateL() {
+    this.router.navigate(["login"])
+  }
+
   ngOnInit() {
   }
 

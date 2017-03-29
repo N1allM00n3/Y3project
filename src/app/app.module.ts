@@ -12,12 +12,28 @@ import { HomeComponent } from './home/home.component';
 import { GamePage1Component } from './game-page1/game-page1.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 
+import {ChessBoardComponent} from "./chessboard/chessboardcomponent";
+import {ChessEngineAPI} from "./engine/chessboardUI";
+import {FieldComponent} from "./field/fieldcomponent";
+import {RowComponent} from "./row/rowcomponent";
+import ChessboardUI = ChessEngineAPI.ChessboardUI;
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './_guards/index';
+//import { RegisterComponent } from './register/index';
+import { AuthenticationService, UserService } from './_services/index';
+
 @NgModule({
   declarations: [
     AppComponent,
+    //AlertComponent,
     HomeComponent,
     GamePage1Component,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    ChessBoardComponent,
+    RowComponent,
+    FieldComponent,
+    LoginComponent
+    //RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +42,16 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     RouterModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  providers: [],
+  providers: [
+    { provide: ChessBoardComponent,   useClass:    ChessBoardComponent },
+    { provide: ChessboardUI,   useClass:    ChessboardUI },
+    { provide: FieldComponent,   useClass:    FieldComponent },
+    { provide: RowComponent,   useClass:    RowComponent },
+    AuthGuard,
+    AuthenticationService,
+    UserService
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
