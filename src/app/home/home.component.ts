@@ -14,6 +14,14 @@ export class HomeComponent implements OnInit {
     this.router.navigate(["game-page1"])
   }
 
+  navigateB() {
+    this.router.navigate(["game-page2"])
+  }
+
+  navigateC() {
+    this.router.navigate(["game-page3"])
+  }
+
   navigateSD() {
     this.router.navigate(["student-details"])
   }

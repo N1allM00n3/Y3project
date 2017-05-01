@@ -1,0 +1,17 @@
+footer {
+      background-color: #555;
+      color: white;
+      bottom: 0;
+      position: relative;
+      padding: 15px;
+    }
+
+/*.navbar {
+      background-color: #04b861;
+}*/
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }

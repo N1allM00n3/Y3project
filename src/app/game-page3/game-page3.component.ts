@@ -3,11 +3,13 @@ import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-game-page1',
-  templateUrl: './game-page1.component.html',
-  styleUrls: ['./game-page1.component.css']
+  selector: 'app-game-page3',
+  templateUrl: './game-page3.component.html',
+  styleUrls: ['./style.scss']
 })
-export class GamePage1Component implements OnInit {
+
+
+export class GamePage3Component implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -15,19 +17,22 @@ export class GamePage1Component implements OnInit {
     this.router.navigate([""])
   }
 
-  navigateSD() {
-    this.router.navigate(["student-details"])
+  navigateA() {
+    this.router.navigate(["game-page1"])
   }
 
   navigateB() {
     this.router.navigate(["game-page2"])
   }
 
-  navigateC() {
-    this.router.navigate(["game-page3"])
+  navigateSD() {
+    this.router.navigate(["student-details"])
   }
 
   ngOnInit() {
   }
+  
 
 }
+
+

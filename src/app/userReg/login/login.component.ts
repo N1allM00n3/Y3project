@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {AuthenticationService } from '../_services/index';
+import {AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
   selector: 'app-login',
@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     //private route: ActivatedRoute,
-    private authenticationService: AuthenticationService
-    //private alertService: AlertService
+    private authenticationService: AuthenticationService,
+    private alertService: AlertService
     ) { }
 
   ngOnInit() {
@@ -38,18 +38,18 @@ export class LoginComponent implements OnInit {
   navSD() {
     this.router.navigate(["student-details"])
   }
-  //login() {
-   // this.loading = true;
-   // this.authenticationService.login(this.model.username, this.model.password)
-   //     .subscribe(
-   //       data => {
-     //       this.router.navigate([this.returnUrl]);
-       //   },
-         // error => {
-           // this.alertService.error(error);
-            //this.loading = false;
-          //}
-        //)
- // }
+  login() {
+    this.loading = true;
+    this.authenticationService.login(this.model.username, this.model.password)
+        .subscribe(
+          data => {
+            this.router.navigate([this.returnUrl]);
+          },
+          error => {
+            this.alertService.error(error);
+            this.loading = false;
+          }
+        )
+  }
 
 }
