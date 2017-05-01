@@ -10,14 +10,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { GamePage1Component } from './game-page1/game-page1.component';
+import { GamePage2Component } from './game-page2/game-page2.component';
+import { GamePage3Component } from './game-page3/game-page3.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 
 import {ChessBoardComponent} from "./game-page1/chessboard/chessboardcomponent";
 import {ChessEngineAPI} from "./game-page1/engine/chessboardUI";
 import {FieldComponent} from "./game-page1/field/fieldcomponent";
 import {RowComponent} from "./game-page1/row/rowcomponent";
-import { GamePage2Component } from './game-page2/game-page2.component';
-import { GamePage3Component } from './game-page3/game-page3.component';
+
 import ChessboardUI = ChessEngineAPI.ChessboardUI;
 
 //import { LoginComponent } from './userReg/login/login.component';
